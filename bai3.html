@@ -6,21 +6,22 @@
 </head>
 <body>
 <script>
-    let n = +prompt("Nhập số lượng phần tử trong mảng");
-    let arr24 = new Array(n)
-    let numBer = ['1','2','3','4','5','6','7','8','9'];
-    for (let i = 0; i < n; i++) {
-        arr24[i] = prompt("Nhập giá trị của phần tử " + i + ":");
+    let length = +prompt("Nhập vào độ dài mảng");
+    let array = new Array(length);
+    let number1 = ['0','1','2','3','4','5','6','7','8','9'];
+    for (let i = 0; i < array.length; i++) {
+        array[i] = prompt("Nhập cái gì cũng được " + (i + 1));
     }
-    document.write("mảng vừa tạo là: " + arr24 +'<br/>')
+    let text = array.toString();
+    let arr = text.split("")
+
 
     let count = 0;
-    for ( let i = 0 ; i < arr24.length; i++) {
-        if  (numBer.indexOf(arr24[i]) !== -1) {
-            count = count + 1;
-        }
+    for ( let i = 0 ; i < number1.length; i++) {
+        if (arr.indexOf(number1[i]) != -1)
+            count++
     }
-    document.write("số lượng ký tự số có trong mảng là: " + count)
+    console.log("số lượng ký tự số có trong mảng là: " + count)
 </script>
 </body>
 </html>
